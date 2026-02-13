@@ -1,0 +1,98 @@
+:root {
+    --primary-blue: rgb(52, 152, 219);
+    --danger-red: rgb(231, 76, 60);
+    --border-color: rgb(221, 221, 221);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(249, 249, 249);
+}
+
+header .top-bar {
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#add-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger-red);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
