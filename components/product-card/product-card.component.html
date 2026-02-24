@@ -1,0 +1,29 @@
+<article class="card">
+  <div class="gallery">
+    <img [src]="currentImage" class="main-photo" alt="{{product.name}}">
+    <div class="thumbnails">
+      <img *ngFor="let img of product.images" 
+           [src]="img" 
+           (click)="setMainImage(img)"
+           [class.active]="currentImage === img">
+    </div>
+  </div>
+
+  <div class="content">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+    
+    <div class="meta">
+      <span class="price">{{ product.price | number:'1.0-0' }} ₸</span>
+      <span class="rating">⭐ {{ product.rating }}</span>
+    </div>
+
+    <div class="btns">
+      <a [href]="product.link" target="_blank" class="buy-link">Купить на Kaspi</a>
+      <div class="share-box">
+        <button (click)="share('wa')" class="wa">WA</button>
+        <button (click)="share('tg')" class="tg">TG</button>
+      </div>
+    </div>
+  </div>
+</article><p>product-card works!</p>
